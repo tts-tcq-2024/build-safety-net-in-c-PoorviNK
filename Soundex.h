@@ -24,6 +24,17 @@ char Is_MN(char c){
 //         return '0';
     
 // }
+char is_BFPV(char c)
+{
+	char bfpv[4]={'b','f','p','v'}
+	int i;
+	for(i=0;i<3;i++)
+	{
+		if(c == bfpv[i])
+		return '1';
+	}
+	
+}
 char Is_BF(char c){
      if(c =='B' || c == 'F')
         return '1';
@@ -67,7 +78,7 @@ char Is_DT(char c){
 }
 char getSoundexCode(char c) {
     //c = toupper(c);
-    c = Is_BFPV(toupper(c));
+    c = is_BFPV(toupper(c));
     c = Is_CGJKQSXZ(toupper(c));
     c = Is_DT(toupper(c));
     c = Is_L(toupper(c));
