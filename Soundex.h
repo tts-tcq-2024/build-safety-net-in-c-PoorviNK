@@ -112,19 +112,21 @@ void Check_Val(char *soundex, int *sIndex, char code){
 
 void generateSoundex(const char *name, char *soundex) {
     int len = strlen(name);
-    soundex[0] = toupper(name[0]);
-    int sIndex = 1;
+    soundex[0] = toupper(name[0]); // Retain the first letter
+    int sIndex = 1; // Initialize Soundex index
 
-    for (int i = 1; LOGIC; i++) {
+    for (int i = 1; (i < len) && (sIndex < 4); i++) {
         char code = getSoundexCode(name[i]);
         Check_Val(soundex, &sIndex, code);
     }
 
+    // Zero-pad to ensure 4 characters
     while (sIndex < 4) {
         soundex[sIndex++] = '0';
     }
 
-    soundex[4] = '\0';
+    soundex[4] = '\0'; // Null-terminate the string
+    //printf("%s\n", soundex); // Output the result for testing
 }
 
 #endif // SOUNDEX_H
