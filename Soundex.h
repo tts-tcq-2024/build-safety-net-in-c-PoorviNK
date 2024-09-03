@@ -1,7 +1,7 @@
 #ifndef SOUNDEX_H
 #define SOUNDEX_H
 #define LOGIC (i < len) && (sIndex < 4)
-#define NULLCHECK code != '0' && code != soundex[sIndex - 1]
+#define NULLCHECK code != '0' && code != soundex[*sIndex - 1]
 
 #include "Soundex.h"
 #include <ctype.h>
@@ -103,10 +103,10 @@ char getSoundexCode(char c) {
     
     //return v;
 }
-void Check_Val(char *soundex, int sIndex, char code){
+void Check_Val(char *soundex, int *sIndex, char code){
 	
 	if (NULLCHECK) {
-            soundex[sIndex++] = code;
+            soundex[*sIndex++] = code;
         }
 }
 
@@ -117,8 +117,7 @@ void generateSoundex(const char *name, char *soundex) {
 
     for (int i = 1; LOGIC; i++) {
         char code = getSoundexCode(name[i]);
-        Check_Val(soundex, sIndex, code);
-	sIndex++;
+        Check_Val(soundex, &sIndex, code);
     }
 
     while (sIndex < 4) {
