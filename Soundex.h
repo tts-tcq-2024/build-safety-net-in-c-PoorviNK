@@ -81,7 +81,7 @@ void generateSoundex(const char *name, char *soundex) {
 
     for (int i = 1; LOGIC; i++) {
         char code = getSoundexCode(name[i]);
-        CheckVal(soundex, sIndex, code);
+        Check_Val(soundex, sIndex, code);
     }
 
     while (sIndex < 4) {
