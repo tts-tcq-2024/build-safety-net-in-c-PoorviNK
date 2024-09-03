@@ -30,7 +30,7 @@ char Is_BFPV(char c){
     else return '0';
 }
 char Is_CGJKQSXZ(char c){
-    if(c == 'C' || c == 'G' || c =='J' || c == 'K' || c == 'Q' c == 'S' || c == 'X' || c == 'Z')
+    if(c == 'C' || c == 'G' || c =='J' || c == 'K' || c == 'Q' || c == 'S' || c == 'X' || c == 'Z')
         return '2';
     else return '0';
 }
