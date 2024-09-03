@@ -4,29 +4,6 @@
 #include "Soundex.h"
 #include <ctype.h>
 #include <string.h>
-
-char getSoundexCode(char c) {
-    //c = toupper(c);
-    c = Is_BFPV(toupper(c));
-    c = Is_CGJKQSXZ(toupper(c));
-    c = Is_DT(toupper(c));
-    c = Is_L(toupper(c));
-    c = Is_MN(toupper(c));
-    c = Is_R(toupper(c));
-    c = Is_Vowel(toupper(c));
-    
-    // switch (c) {
-    //     case 'B': case 'F': case 'P': case 'V': return '1';
-    //     case 'C': case 'G': case 'J': case 'K': case 'Q': case 'S': case 'X': case 'Z': return '2';
-    //     case 'D': case 'T': return '3';
-    //     case 'L': return '4';
-    //     case 'M': case 'N': return '5';
-    //     case 'R': return '6';
-    //     default: return '0'; // For A, E, I, O, U, H, W, Y
-    // }
-    
-    return c;
-}
 char Is_L(char c){
     if(c == 'L')
         return '4';
@@ -62,6 +39,29 @@ char Is_DT(char c){
         return '3';
     else return '0';
 }
+char getSoundexCode(char c) {
+    //c = toupper(c);
+    c = Is_BFPV(toupper(c));
+    c = Is_CGJKQSXZ(toupper(c));
+    c = Is_DT(toupper(c));
+    c = Is_L(toupper(c));
+    c = Is_MN(toupper(c));
+    c = Is_R(toupper(c));
+    c = Is_Vowel(toupper(c));
+    
+    // switch (c) {
+    //     case 'B': case 'F': case 'P': case 'V': return '1';
+    //     case 'C': case 'G': case 'J': case 'K': case 'Q': case 'S': case 'X': case 'Z': return '2';
+    //     case 'D': case 'T': return '3';
+    //     case 'L': return '4';
+    //     case 'M': case 'N': return '5';
+    //     case 'R': return '6';
+    //     default: return '0'; // For A, E, I, O, U, H, W, Y
+    // }
+    
+    return c;
+}
+
 
 void generateSoundex(const char *name, char *soundex) {
     int len = strlen(name);
