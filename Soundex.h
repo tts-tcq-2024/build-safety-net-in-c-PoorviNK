@@ -24,15 +24,41 @@ char Is_MN(char c){
 //         return '0';
     
 // }
-char Is_BFPV(char c){
-    if(c == 'B' || c == 'F' || c =='P' || c == 'V')
+char Is_BF(char c){
+     if(c =='B' || c == 'F')
         return '1';
     else return '0';
 }
-char Is_CGJKQSXZ(char c){
-    if(c == 'C' || c == 'G' || c =='J' || c == 'K' || c == 'Q' || c == 'S' || c == 'X' || c == 'Z')
+char Is_PV(){
+    if(c =='P' || c == 'V')
+        return '1';
+    else return '0';
+}
+char Is_BFPV(char c){
+    c = Is_BF(c);
+    c = Is_PV(c);
+    return c;
+}
+char Is_CGJ(char c){
+    if(c == 'C' || c == 'G' || c =='J')
         return '2';
     else return '0';
+}
+char Is_KQS(char c){
+    if(c == 'K' || c == 'Q' || c == 'S')
+        return '2';
+    else return '0';
+}
+char Is_XZ(char c){
+    if( c == 'X' || c == 'Z')
+        return '2';
+    else return '0';
+}
+char Is_CGJKQSXZ(char c){
+    c = Is_CGJ(c);
+    c = Is_KQS(c);
+    c = Is_XZ(c);
+   return c;
 }
 char Is_DT(char c){
     if(c == 'D' || c == 'T')
