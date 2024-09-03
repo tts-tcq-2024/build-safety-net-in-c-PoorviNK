@@ -26,7 +26,7 @@ char Is_MN(char c){
 // }
 char is_BFPV(char c)
 {
-	char bfpv[4]={'b','f','p','v'}
+	char bfpv[4]={'b','f','p','v'};
 	int i;
 	for(i=0;i<3;i++)
 	{
