@@ -29,7 +29,7 @@ char Is_BF(char c){
         return '1';
     else return '0';
 }
-char Is_PV(){
+char Is_PV(char c){
     if(c =='P' || c == 'V')
         return '1';
     else return '0';
