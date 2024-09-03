@@ -35,6 +35,16 @@ char is_BFPV(char c)
 	}
 	
 }
+char Is_CGJKQSXZ(char c)
+{
+	char cgjkqsxz[8]={'c','g','j','k','q','s','x','z'};
+	int i;
+	for{i=0;i<7;i++}
+	{
+		if(c == cgjkqsxz[i])
+		return '2';
+	}
+}
 char Is_BF(char c){
      if(c =='B' || c == 'F')
         return '1';
@@ -65,12 +75,12 @@ char Is_XZ(char c){
         return '2';
     else return '0';
 }
-char Is_CGJKQSXZ(char c){
-    c = Is_CGJ(c);
-    c = Is_KQS(c);
-    c = Is_XZ(c);
-   return c;
-}
+// char Is_CGJKQSXZ(char c){
+//     c = Is_CGJ(c);
+//     c = Is_KQS(c);
+//     c = Is_XZ(c);
+//    return c;
+// }
 char Is_DT(char c){
     if(c == 'D' || c == 'T')
         return '3';
