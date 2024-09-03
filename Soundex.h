@@ -85,6 +85,7 @@ char getSoundexCode(char c) {
         '2', '6', '2', '3', '0', '1', '0', '2', // Q, R, S, T, U, V, W, X
         '0', '2'                                // Y, Z
     };
+
     
     return lookupTable[c-65];
     
