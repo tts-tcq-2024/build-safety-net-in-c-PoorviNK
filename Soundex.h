@@ -7,23 +7,15 @@
 char Is_L(char c){
     if(c == 'L')
         return '4';
-    else return '0';
 }
 char Is_R(char c){
     if(c == 'R')
-        return '6';
-    else return '0';
+        return '6';   
 }
 char Is_MN(char c){
     if(c == 'M' || c == 'N')
-        return '5';
-    else return '0';
+        return '5';   
 }
-// char Is_Vowel(char c){
-//     if(c == 'A' || c == 'E' || c =='I' || c == 'O' || c == 'U')
-//         return '0';
-    
-// }
 char is_BFPV(char c)
 {
 	char bfpv[4]={'b','f','p','v'};
