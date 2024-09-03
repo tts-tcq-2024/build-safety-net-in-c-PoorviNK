@@ -39,7 +39,7 @@ char Is_CGJKQSXZ(char c)
 {
 	char cgjkqsxz[8]={'c','g','j','k','q','s','x','z'};
 	int i;
-	for{i=0;i<7;i++}
+	for(i=0;i<7;i++)
 	{
 		if(c == cgjkqsxz[i])
 		return '2';
