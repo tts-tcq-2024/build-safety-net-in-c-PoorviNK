@@ -19,11 +19,11 @@ char Is_MN(char c){
         return '5';
     else return '0';
 }
-char Is_Vowel(char c){
-    if(c == 'A' || c == 'E' || c =='I' || c == 'O' || c == 'U')
-        return '0';
+// char Is_Vowel(char c){
+//     if(c == 'A' || c == 'E' || c =='I' || c == 'O' || c == 'U')
+//         return '0';
     
-}
+// }
 char Is_BFPV(char c){
     if(c == 'B' || c == 'F' || c =='P' || c == 'V')
         return '1';
@@ -47,7 +47,7 @@ char getSoundexCode(char c) {
     c = Is_L(toupper(c));
     c = Is_MN(toupper(c));
     c = Is_R(toupper(c));
-    c = Is_Vowel(toupper(c));
+    //c = Is_Vowel(toupper(c));
     
     // switch (c) {
     //     case 'B': case 'F': case 'P': case 'V': return '1';
