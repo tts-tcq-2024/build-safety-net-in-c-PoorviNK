@@ -115,7 +115,7 @@ void generateSoundex(const char *name, char *soundex) {
     soundex[0] = toupper(name[0]); // Retain the first letter
     int sIndex = 1; // Initialize Soundex index
 
-    for (int i = 1; (i < len) && (sIndex < 4); i++) {
+    for (int i = 1; LOGIC; i++) {
         char code = getSoundexCode(name[i]);
         Check_Val(soundex, &sIndex, code);
     }
