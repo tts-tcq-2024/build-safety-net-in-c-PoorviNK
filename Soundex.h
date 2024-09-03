@@ -67,7 +67,12 @@ char getSoundexCode(char c) {
     
     return c;
 }
-
+void Check_Val(char *soundex, int sIndex, char code){
+	
+	if (NULLCHECK) {
+            soundex[sIndex++] = code;
+        }
+}
 
 void generateSoundex(const char *name, char *soundex) {
     int len = strlen(name);
@@ -76,9 +81,7 @@ void generateSoundex(const char *name, char *soundex) {
 
     for (int i = 1; LOGIC; i++) {
         char code = getSoundexCode(name[i]);
-        if (NULLCHECK) {
-            soundex[sIndex++] = code;
-        }
+        CheckVal(soundex, sIndex, code);
     }
 
     while (sIndex < 4) {
