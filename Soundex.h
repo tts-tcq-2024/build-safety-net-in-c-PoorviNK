@@ -103,13 +103,12 @@ char getSoundexCode(char c) {
     
     //return v;
 }
-void Check_Val(char *soundex, int *sIndex, char code){
-	
-	if (NULLCHECK) {
-            soundex[*sIndex++] = code;
-        }
-}
 
+void Check_Val(char *soundex, int *sIndex, char code) {
+    if (code != '0' && code != soundex[*sIndex - 1]) {
+        soundex[(*sIndex)++] = code;
+    }
+}
 void generateSoundex(const char *name, char *soundex) {
     int len = strlen(name);
     soundex[0] = toupper(name[0]); // Retain the first letter
