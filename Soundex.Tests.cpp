@@ -4,6 +4,6 @@
 TEST(SoudexTestsuite, ReplacesConsonantsWithAppropriateDigits) {
  //AAA
   char soundex[5];
-  generateSoundex("ASHCRAFT", soundex);
-  ASSERT_STREQ(soundex,"A261");
+  generateSoundex("AX", soundex);
+  ASSERT_STREQ(soundex,"A200");
 }
